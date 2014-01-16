@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <com.nutiteq.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <TextView
+            android:id="@+id/avgvario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/textshape"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="@string/dfavgvar"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <com.flightcomputer.utilities.VerticalProgressBar_Reverse
+            android:id="@+id/avgprogbar_reverse"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/textGpsTime"
+            android:layout_below="@+id/avgvario"
+            android:layout_marginLeft="2dip"
+            android:maxWidth="20dip"
+            android:minWidth="20dip"
+            android:padding="5dp" />
+
+        <com.flightcomputer.utilities.VerticalProgressBar
+            android:id="@+id/avgprogbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/avgvario"
+            android:layout_below="@+id/textDistEdge"
+            android:layout_marginLeft="2dip"
+            android:maxWidth="20dip"
+            android:minWidth="20dip"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/textGpsTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/filledtextshape"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="Time: 00:00"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textDistEdge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/filledtextshape"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="DisEdg: 0 Km"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true" >
+
+        <TextView
+            android:id="@+id/disttakeoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/altitude"
+            android:background="@drawable/textshape"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/dfdtkf"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/disttakeoff"
+            android:background="@drawable/textshape"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/dfspeed"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/speed"
+            android:background="@drawable/textshapecoord"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/dflat"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lat"
+            android:background="@drawable/textshapecoord"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/dflon"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/trackcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lon"
+            android:background="@drawable/textshapetrack"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/dftrck"
+            android:textColor="#FFFF00"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/filledtextshape"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="Start: 00:00"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/textshapegalt"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="@string/dfalt"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/toggle_vario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textStartTime"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/enablevario"
+            android:padding="5dp"
+            android:textOff=""
+            android:textOn="" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vehicletype_level_value">
+        <item>1</item>
+		<item>2</item>
+		<item>4</item>
+		<item>8</item>
+		<item>16</item>
+		<item>32</item>
+		<item>64</item>
+		<item>128</item>
+		<item>16385</item>
+		<item>16386</item> 
+		<item>16388</item>
+		<item>16400</item>
+		<item>16401</item>
+		<item>16402</item>
+		<item>16403</item>
+		<item>16500</item>
+		<item>16501</item>				
+		<item>16502</item>
+		<item>16600</item>
+		<item>16601</item>
+		<item>16602</item>
+		<item>17100</item>
+		<item>17101</item>       
+   </string-array>
+</resources>

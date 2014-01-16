@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#800000"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btnClearAll"
+            style="@style/btnStyleOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:layout_marginLeft="12dip"
+            android:text="Clear Variolog Folder"
+            android:textSize="18sp" />
+         <Button
+            android:id="@+id/btnExitIgc"
+            style="@style/btnStyleGenoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:layout_marginRight="12dip"
+            android:text="Exit"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <ListView
+	    android:id="@+id/lvCheckBox"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_below="@+id/linearLayout1"
+	    android:layout_weight="2"
+	    android:background="#AA0000"
+	    android:dividerHeight="4px"
+	    android:drawSelectorOnTop="false" >
+	</ListView>
+</LinearLayout>

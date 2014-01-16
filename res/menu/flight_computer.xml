@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >   
+   <item android:id="@+id/menu_position" android:title="@string/menu_position" android:icon="@drawable/gps" android:showAsAction="always">
+		<menu>
+			<item android:id="@+id/menu_position_last_known" android:title="@string/menu_position_last_known" />
+			<item android:id="@+id/menu_position_enter_coordinates" android:title="@string/menu_position_enter_coordinates" />					
+			<item android:id="@+id/menu_gpsstatus" android:title="@string/menu_gpsstatus" />	
+			<item android:id="@+id/menu_position_search" android:title="@string/menu_position_search" />	
+			<item android:id="@+id/menu_position_radar" android:title="@string/menu_position_radar" />	
+			<item android:id="@+id/menu_position_onoff" android:title="@string/menu_position_onoff" />												
+		</menu>
+	</item>
+	<item android:id="@+id/menu_mapfile" android:title="@string/menu_mapfile" android:icon="@drawable/map_icon" android:showAsAction="always">
+	    <menu>		   
+			<item android:id="@+id/menu_mapoffline" android:title="@string/menu_mapoffline" />		
+			<item android:id="@+id/menu_map_online1" android:title="@string/menu_map_online1" />	
+			<item android:id="@+id/menu_map_online2" android:title="@string/menu_map_online2" />
+			<item android:id="@+id/menu_map_online3" android:title="@string/menu_map_online3" />
+			<item android:id="@+id/menu_map_url" android:title="@string/menu_map_url" />										
+		</menu>
+	</item>
+	<item android:id="@+id/menu_points" android:title="@string/menu_points" android:icon="@drawable/igc" android:showAsAction="always">
+		<menu>	
+		    <item android:id="@+id/menu_loadigc" android:title="@string/menu_loadigc" />			   
+			<item android:id="@+id/menu_task" android:title="@string/menu_task" />	
+			<item android:id="@+id/menu_draw_task" android:title="@string/menu_draw_task" />										
+		</menu>
+	</item>
+	<item android:id="@+id/menu_preferences" android:title="@string/menu_preferences" android:icon="@drawable/settings" android:showAsAction="always">
+		<menu>	
+		    <item android:id="@+id/menu_settings" android:title="@string/menu_preferences" />			   
+			<item android:id="@+id/menu_clearmap" android:title="@string/menu_clearmap" />
+			<item android:id="@+id/menu_2d" android:title="@string/menu_2d" />
+			<item android:id="@+id/menu_3d" android:title="@string/menu_3d" />
+			<item android:id="@+id/menu_altimeter" android:title="@string/menu_altimeter"/>						
+		</menu>
+	</item>
+ 	<item android:id="@+id/menu_exit" android:title="@string/exit" android:icon="@drawable/exit" android:showAsAction="always" /> 	
+</menu>

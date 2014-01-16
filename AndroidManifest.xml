@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flightcomputer"
+    android:versionCode="31"
+    android:versionName="3.1" >
+    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="19" />   	
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />		
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> 	
+	<application 	
+	    android:allowBackup="true"    
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"        
+        android:alwaysRetainTaskState="true"       
+        android:largeHeap="true"              
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.flightcomputer.FCActivity"           
+            android:label="@string/app_name" 
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.nutiteq.advancedmap.mapquest.SearchQueryResults" />
+        </activity>
+        <activity android:name=".EditPreferences" /> 
+  		<activity android:name=".IgcLoad" /> 
+  		<activity android:name=".Task" /> 
+  		<activity android:name=".DownloadActivity" /> 
+  		<activity android:name=".PressureAltimeterActivity" android:windowSoftInputMode="stateAlwaysVisible|adjustPan"
+  		     android:theme="@style/NoTitleDialog" />   		
+  		<activity android:name=".GpsSkyActivity" android:windowSoftInputMode="stateAlwaysVisible|adjustPan"
+  		     android:theme="@style/NoTitleDialog" /> 
+  		<activity android:name=".filepicker.FilePicker" />   
+  		<service android:enabled="true" android:name="com.flightcomputer.utilities.BaroService"/>  	
+  		 <activity
+			    android:name="com.nutiteq.advancedmap.mapquest.SearchQueryResults"
+			    android:exported="false">
+		    <intent-filter>
+		        <action android:name="android.intent.action.SEARCH" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		
+		    <meta-data
+		        android:name="android.app.searchable"
+		        android:resource="@xml/searchable" />
+		</activity>
+	<provider
+           android:name="com.nutiteq.advancedmap.mapquest.SearchSuggestionProvider"
+           android:authorities="com.nutiteq.osm"
+	       android:exported="false">
+	</provider>    	
+  		</application>
+</manifest>

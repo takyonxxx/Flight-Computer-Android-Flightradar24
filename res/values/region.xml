@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+     <string-array name="regions">
+        <item>full</item>
+        <item>europe</item>
+        <item>ceur</item>
+        <item>northamerica</item>   
+        <item>southamerica</item>
+        <item>asia</item>
+        <item>japan</item>
+        <item>africa</item>
+        <item>oceania</item>       
+        <item>atlantic</item>       
+        <item>northatlantic</item>    
+        <item>poland</item>
+        <item>germany</item>
+        <item>london</item>
+        <item>ireland</item>
+        <item>spain</item>
+        <item>france</item>        
+        <item>scandinavia</item>
+        <item>italy</item>   
+        <item>maldives</item>           
+        <item>na_n</item>
+        <item>na_c</item>
+        <item>na_cny</item>
+        <item>na_cla</item>
+        <item>na_cat</item>
+        <item>na_cse</item>
+        <item>na_nw</item>
+        <item>na_ne</item>
+        <item>na_sw</item>
+        <item>na_se</item>    
+        <item>na_cc</item>      
+        <item>na_s</item>
+        <item>na_c</item>   
+    </string-array>    
+</resources>

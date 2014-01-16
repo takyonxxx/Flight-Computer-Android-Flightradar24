@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>   
+  <string name="app_name">FlightComputer</string>
+  <string name="action_settings">Settings</string>
+  <string name="btn_delltask">Delete Task</string>
+  <string name="btn_addTp">Add Turn Point</string>
+  <string name="btn_delete">Delete</string>
+  <string name="hello_world">Hello world!</string>
+  <string name="compass_on">Compass on</string> 
+  <string name="compass_off">Compass off</string> 
+  <string name="mapurl">Map Url</string> 
+  <string name="titleturnpoint">Turn Points</string> 
+  <string name="titletasksettings">Task Settings</string> 
+  <string name="titletask">Current Task</string> 
+  <string name="tname">TurnPoint Name:</string> 
+  <string name="tlat">Latitude: (decimal) </string> 
+  <string name="tlon">Longitude: (decimal)</string> 
+  <string name="talt">Altitude: (m)</string> 
+  <string name="tcyl">Cylinder: (km)</string> 
+  <string name="ttyp">Point Type:</string> 
+  <string name="latitude">Latitude</string> 
+  <string name="longitude">Longitude</string> 
+  <string name="menu_info">Info</string> 
+  <string name="menu_vario">Enable Vario</string> 
+  <string name="menu_resetmap">Reset Map</string> 
+  <string name="menu_points">Points</string> 
+  <string name="menu_loadigc">Load IGC</string> 
+  <string name="menu_task">Create-Edit Task</string>  
+   <string name="menu_draw_task">Draw Task</string> 
+  <string name="menu_enablelog">Enable LOG</string> 
+  <string name="menu_position">Position</string> 
+  <string name="menu_position_search">Search Position</string>  
+  <string name="menu_position_radar">Get Radar Info</string>  
+  <string name="menu_position_onoff">STOP GPS</string>  
+  <string name="menu_position_enter_coordinates">Enter Coordinates</string> 
+  <string name="menu_position_last_known">Go Last Position</string> 
+  <string name="menu_preferences">Preferences</string> 
+  <string name="exit">Exit</string> 
+  <string name="menu_2d">Set to 2D</string> 
+  <string name="menu_3d">Set to 3D</string> 
+  <string name="menu_clearitems">Clear Items</string>  
+  <string name="menu_mapfile">Open Map File</string> 
+  <string name="menu_mapoffline">Open Map File</string> 
+  <string name="menu_downloadmbtiles">Download File</string>
+  <string name="menu_clearmap">Clear Map</string>  
+  <string name="menu_gpsstatus">Gps Status</string>  
+  <string name="menu_animate">Disable Animate</string>   
+  <string name="menu_map_online1">Topo (Online)</string>   
+  <string name="menu_map_online2">Openstreetmap (Online)</string> 
+  <string name="menu_map_online3">Cloudmademap (Online)</string> 
+  <string name="menu_map_url">Enter Url Of Map</string>   
+  <string name="menu_altimeter">Set Altitude</string>    
+  <string name="no_location_provider_available">No location source available</string> 
+  <string name="preferences_radar">PLANE RADAR SETTINGS</string>
+  <string name="preferences_general">GENERAL SETTINGS</string> 
+  <string name="preferences_pilot">PILOT SETTINGS</string> 
+  <string name="preferences_region">Select Region for Plane Radar</string> 
+  <string name="preferences_satmode">Enable Satellite Mode</string> 
+  <string name="preferences_zoomLevel">Start Zoom level</string> 
+  <string name="preferences_dumpLevel">Filter Dump level</string> 
+  <string name="preferences_sinkLevel">Sink Alarm level</string> 
+  <string name="preferences_varioLevel">Vario level for red igc graphic</string> 
+  <string name="preferences_map">Map Type</string> 
+  <string name="preferences_map_view_mode">Map mode</string>
+  <string name="preferences_online_map">Select Base Map</string>
+  <string name="preferences_map_view_mode_desc">Select the operating mode</string>
+  <string name="preferences_logtime">Igc Log Interval</string>   
+  <string name="unit_symbol_kilometer">&#160;km</string>
+  <string name="unit_symbol_meter">&#160;m</string>
+  <string name="go_to_position">Go to position</string> 
+  <string name="cancel">Cancel</string> 
+  <string name="file_invalid">The selected file is invalid.</string> 
+  <string name="file_select">Please select a file.</string> 
+  <string name="file_size_byte">byte</string> 
+  <string name="file_size_bytes">bytes</string> 
+  <string name="file_size_kb">kB</string> 
+  <string name="file_size_mb">MB</string> 
+  <string name="file_size_gb">GB</string> 
+  <string name="selected">Selected</string>    
+  <string name="dfspeed">Spd: 0 Km</string> 
+  <string name="dfalt">Alt: 0 m</string> 
+  <string name="btn_altdec">Dec Alt (-)</string>    
+  <string name="btn_altinc">Inc Alt (+)</string> 
+  <string name="btn_exit">Exit</string> 
+  <string name="dfgalt">GAlt: 0 m</string> 
+  <string name="dfbr">Br : 0°</string> 
+  <string name="dfacc">Acc: 0 m</string> 
+  <string name="dflat">0.000000</string>  
+  <string name="dflon">0.000000</string>  
+  <string name="dfavgvar">0.0 m/s</string>  
+  <string name="dfdtkf">DTkf: 0 Km</string>  
+  <string name="dftrck">Trck: 0</string>  
+  <string name="gps_prn_column_label">PRN</string>
+  <string name="gps_snr_column_label">SNR</string>
+  <string name="gps_elevation_column_label">Elev</string>
+  <string name="gps_azimuth_column_label">Azim</string>
+  <string name="gps_flags_column_label">Flags</string>
+  <string name="error">Error</string>
+  <string name="error_last_location_unknown">The last location is unknown</string>
+  <string name="search_label">Search</string>
+  <string name="search_hint">Address</string>
+  <string name="search_invoke">Search</string>
+  <string name="txt_starttime">Start Time:</string>
+  <string name="txt_time">00:00:00</string>
+  <string name="txt_endtime">End Time:</string>
+  <string name="ok">OK</string>   
+   <string name="alert_admonition">
+        NOT FOR NAVIGATION. NOT A FLIGHT INSTRUMENT. Do not use this app to measure or identify your
+        altitude. Do not use this app to verify or &quot;cross-check&quot; the indications of any
+        altitude or barometric pressure measurement device.
+    </string>
+    <string name="alert_admonition_ack">Acknowledged</string>    
+    <string name="alert_pressure">
+        This app requires a pressure sensor in your Android device to measure atmospheric pressure and
+        compute an altitude indication. It will run without a pressure sensor, in which case the
+        experience will resemble using this app at sea level on the Standard Day. 
+    </string>
+    <string name="alert_pressure_ack">Continue</string>
+    <string name="alert_pressure_abort">Quit</string>    
+    <string name="altimeter_face_desc">Altimeter face with printed markings.</string>
+    <string name="altimeter_needle_100_desc">Altimeter needle indicating hundreds of feet.</string>
+    <string name="altimeter_needle_1000_desc">Altimeter needle indicating thousands of feet.</string>
+    <string name="altimeter_needle_10000_desc">Altimeter needle indicating tens of thousands of feet.</string>
+    <string name="altimeter_pressure_dial_desc">Rotating dial indicating the altimeter setting.</string>
+    <string name="altimeter_shaft_cap_desc">Cap covering the end of the altimeter needle shaft.</string> 
+    <string name="taskpointtype">Task Point type</string> 
+    <string-array name="taskpointtype_arrays">
+        <item>Cylinder</item>
+        <item>StartOut-Enter</item>
+        <item>StartIn-Exit</item>
+        <item>TakeOff</item>
+        <item>Goal</item>       
+    </string-array>
+</resources>

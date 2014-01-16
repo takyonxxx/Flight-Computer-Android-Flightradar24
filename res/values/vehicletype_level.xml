@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vehicletype_level">
+        <item>Paraglider</item>
+		<item>Flex wing FAI1</item>
+		<item>Rigid wing FAI5</item>
+		<item>Glider</item>
+		<item>Paramotor</item>
+		<item>Trike</item>
+		<item>Powered flight</item>
+		<item>Hot Air Balloon</item>
+		<item>Walk</item>
+		<item>Run</item> 
+		<item>Bike</item>
+		<item>Hike</item>
+		<item>Cycle</item>
+		<item>Mountain Bike</item>
+		<item>Motorcycle</item>
+		<item>Windsurf</item>
+		<item>Kitesurf</item>				
+		<item>Sailing</item>
+		<item>Snowboard</item>
+		<item>Ski</item>
+		<item>Snowkite</item>
+		<item>Car</item>
+		<item>4x4 Car</item>       
+    </string-array>
+</resources>

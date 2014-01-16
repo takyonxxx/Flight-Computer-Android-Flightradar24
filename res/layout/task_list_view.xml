@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#008000"
+    android:orientation="vertical" >
+      <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#008000"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+         <Button
+            android:id="@+id/btnexittp"
+            style="@style/btnStyleGenoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:layout_marginRight="12dip"
+            android:text="@string/exit"
+            android:textSize="18sp" />
+
+          <Button
+              android:id="@+id/btnaddtp"
+              style="@style/btnStyleOrange"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_alignParentTop="true"
+              android:padding="5dp"
+              android:layout_marginLeft="12dip"
+              android:text="@string/btn_addTp"
+              android:textSize="16sp" />
+
+          <Button
+              android:id="@+id/btndelltask"
+              style="@style/btnStyleOrange"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_centerHorizontal="true"
+              android:padding="5dp"
+              android:text="@string/btn_delltask"
+              android:textSize="16sp" />
+
+    </RelativeLayout>  
+
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF00"
+            android:textStyle="bold"
+            android:textColor="#FF0000" 
+            android:textSize="18sp"
+            android:padding="2dp"
+            android:text="@string/titleturnpoint" />
+
+        <ListView
+            android:id="@+id/listturnpoint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#008000" >
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal" >
+	   
+	        <TextView
+		        android:id="@+id/textstime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"    
+		        android:textStyle="bold"
+		        android:textColor="#FFFF00"
+		        android:textSize="18sp"   
+		        android:layout_marginLeft="12dp"
+		        android:text="@string/txt_starttime" /> 
+		    <EditText
+		        android:id="@+id/txt_starttime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"       
+		        android:textStyle="bold"
+		        android:textColor="#FFFFFF"
+		        android:textSize="18sp"   
+		        android:ems="10"/>
+    </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/linearLayout3"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="#000000"
+         android:orientation="horizontal" >
+	   
+	        <TextView
+		        android:id="@+id/textetime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"    
+		        android:textStyle="bold"
+		        android:textColor="#FFFF00"
+		        android:textSize="18sp"   
+		        android:layout_marginLeft="12dp"
+		        android:text="@string/txt_endtime" />
+
+	        <EditText
+	            android:id="@+id/txt_endtime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:ems="10"
+	            android:textColor="#FFFFFF"
+	            android:textSize="18sp"
+	            android:layout_marginLeft="10dp"
+	            android:textStyle="bold" >
+	        </EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF00"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            android:padding="2dp"
+            android:text="@string/titletask" />   
+        <ListView
+            android:id="@+id/listtask"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000" >
+        </ListView>
+    </LinearLayout>
+</LinearLayout>
+
+  

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+// Pressure Altimeter - a pressure altimeter for Android devices
+// written by Tom Stepleton <stepleton@gmail.com> in early 2012
+// released into the public domain
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/altimeter_pressure_dial"
+        style="@style/AltimeterGraphicElement"
+        android:contentDescription="@string/altimeter_pressure_dial_desc"
+        android:src="@drawable/altimeter_pressure_dial" />
+
+    <ImageView
+        android:id="@+id/altimeter_face"
+        style="@style/AltimeterGraphicElement"
+        android:contentDescription="@string/altimeter_face_desc"
+        android:src="@drawable/altimeter_face" />
+
+    <ImageView
+        android:id="@+id/altimeter_needle_10000"
+        style="@style/AltimeterGraphicElement"
+        android:contentDescription="@string/altimeter_needle_10000_desc"
+        android:src="@drawable/altimeter_needle_10000" />
+
+    <ImageView
+        android:id="@+id/altimeter_needle_1000"
+        style="@style/AltimeterGraphicElement"
+        android:contentDescription="@string/altimeter_needle_1000_desc"
+        android:src="@drawable/altimeter_needle_1000" />
+
+    <ImageView
+        android:id="@+id/altimeter_needle_100"
+        style="@style/AltimeterGraphicElement"
+        android:contentDescription="@string/altimeter_needle_100_desc"
+        android:src="@drawable/altimeter_needle_100" />
+
+    <ImageView
+        android:id="@+id/altimeter_shaft_cap"
+        style="@style/AltimeterGraphicElement"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/altimeter_shaft_cap_desc"
+        android:src="@drawable/altimeter_shaft_cap" />
+
+    <TextView
+        android:id="@+id/debugText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#ffff00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="monospace" >
+    </TextView>
+  
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1" >
+        <Button
+            android:id="@+id/decalt"
+            style="@style/btnStyleOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_altdec"           
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/exit"
+            style="@style/btnStyleGenoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_exit"           
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/incalt"
+            style="@style/btnStyleOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_altinc"           
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>

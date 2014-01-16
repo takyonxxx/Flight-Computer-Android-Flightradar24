@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/menu_preferences">  
+ <PreferenceCategory
+        android:title="@string/preferences_pilot"
+        android:key="second_category">
+        <EditTextPreference
+            android:key="pilotname"
+            android:inputType="text"   
+            android:summary="Pilot name for email and sms info"                       
+            android:title="Pilot Name" />  
+        <EditTextPreference
+            android:key="wingid"
+            android:inputType="number"    
+            android:summary="Competition or wing id"                      
+            android:title="Competition ID" />     
+        <ListPreference android:key="vehicletype"
+              android:title="Vehicle Type"  
+              android:summary="Select your vehicle"              
+              android:entries="@array/vehicletype_level"              
+              android:entryValues="@array/vehicletype_level_value"
+              android:defaultValue="1" />       
+        <EditTextPreference
+            android:key="wingmodel"  
+            android:summary="Enter your wing or vehicle name"                   
+            android:title="Wing Model" />           
+    </PreferenceCategory>   
+    <PreferenceCategory android:title="LIVETRACK24 SETTINGS">
+        <EditTextPreference
+            android:inputType="text"
+            android:key="liveusername"  
+            android:summary="Livetrack24 Username for login"            
+            android:title="Livetrack24 Username" />
+        <EditTextPreference
+            android:inputType="textPassword"
+            android:key="livepassword"   
+            android:summary="Livetrack24 Password for login"            
+            android:title="Livetrack24 Password" />       
+         <CheckBoxPreference
+            android:key="livetrackenabled"
+            android:summary="Enable sending data to Livetrack24"  
+            android:defaultValue="false"
+            android:title="Enable Livetrack24 on Start"/>            
+    </PreferenceCategory>     
+    <PreferenceCategory android:title="@string/preferences_radar">   
+      <CheckBoxPreference
+          android:title="Enable Plane Radar"
+          android:defaultValue="false"
+          android:summary="Dedect Nearest Planes"
+          android:key="checkradar" />   
+      <EditTextPreference
+            android:key="radarrange"
+            android:title="Nearest plane max distance (Km)"               	
+    		android:inputType="number"            
+            android:defaultValue="200" />   
+      <EditTextPreference
+            android:key="radaralt"
+            android:title="Nearest plane max altitude (m)"               
+    		android:inputType="number"            
+            android:defaultValue="15000" />   
+       <ListPreference android:key="radarregion"
+            android:title="@string/preferences_region"	       
+	        android:entries="@array/regions" 
+	        android:entryValues="@array/regions"
+	        android:defaultValue="europe" />   
+    </PreferenceCategory>	
+    <PreferenceCategory android:title="@string/preferences_general"> 
+    <CheckBoxPreference
+          android:title="Enable Igc Record"
+          android:defaultValue="false"
+          android:summary="Igc Record:-> sdcard/Variolog"
+          android:key="checkboxigcrecord" /> 
+    <ListPreference android:key="logtime" android:title="@string/preferences_logtime"        
+        android:entries="@array/logtime_level" 
+        android:entryValues="@array/logtime_level_value"
+        android:defaultValue="3000" />   
+    <CheckBoxPreference
+	      android:title="Enable Gps track draw"
+	      android:defaultValue="false"
+	      android:summary="Enable Gps track draw for your location"
+	      android:key="checkboxgpstrack" />        
+    <CheckBoxPreference
+          android:title="Enable Igc 3D track draw"
+          android:defaultValue="false"
+          android:summary="Enable 3D track draw for igc files"
+          android:key="checkbox3d" /> 
+    <CheckBoxPreference
+          android:title="Multi track mode draw"
+          android:defaultValue="false"
+          android:summary="Enable more than 1 Gps track drawing"
+          android:key="checkboxmulti" />    
+    
+    <ListPreference android:key="dumpLevel" android:title="@string/preferences_dumpLevel"        
+        android:entries="@array/dump_level" 
+        android:entryValues="@array/dump_level_value"
+        android:defaultValue="25" />  
+    <ListPreference android:key="sinkLevel" android:title="@string/preferences_sinkLevel"        
+        android:entries="@array/sink_level" 
+        android:entryValues="@array/sink_level_value"
+        android:defaultValue="2.5" />         
+    <EditTextPreference
+            android:key="linewidth"
+            android:title="Default Line Width"    
+           	android:ems="2"
+    		android:inputType="numberDecimal"            
+            android:defaultValue="0.05" />      
+    <EditTextPreference
+            android:key="trackFactor"
+            android:title="Track Factor"        
+            android:summary="igc load resolution, will diveded to this, 1 real but slow"    
+            android:inputType="number"
+            android:defaultValue="5" />  
+    <EditTextPreference
+            android:key="drawFactor"
+            android:title="Draw Color Factor"        
+            android:summary="drawing color effect,color increament will multiply by this"    
+            android:inputType="number"
+            android:defaultValue="15" />        
+	</PreferenceCategory>		
+</PreferenceScreen>
