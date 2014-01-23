@@ -1,11 +1,11 @@
+/* Copyright (C) Türkay Biliyor 
+   turkaybiliyor@hotmail.com */
+
 package com.flightcomputer.utilities;
-
-import com.flightcomputer.R;
-import com.flightcomputer.R.raw;
-
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import com.flightcomputer.R;
 public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
     private boolean running;
     private double base = 1000.0;
@@ -13,51 +13,59 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
     private SoundPool soundPool;
     private int numSounds = 2;
     private int soundsLoaded = 0;
-    private int tone_1000;
+    private int tone;
     private int sink;
-    private int tone_1000_stream;
+    private int tone_stream;
     private int sink_stream;
+    private int temp;
     private Thread thread;
-    private boolean beepOn=true;
+    private boolean beepOn=false;
     private double avgvario,sinkalarm;
     private double sinkBase = 500.0;
     private double sinkIncrement = 100.0;
     private PiecewiseLinearFunction cadenceFunction;
-    public BeepThread(Context context,double var,double newsinkalarm) {  
+   
+    public BeepThread(Context context) {  
     	cadenceFunction = new PiecewiseLinearFunction(new Point2d(0, 0.4763));
         cadenceFunction.addNewPoint(new Point2d(0.135, 0.4755));
         cadenceFunction.addNewPoint(new Point2d(0.441, 0.3619));
         cadenceFunction.addNewPoint(new Point2d(1.029, 0.2238));
         cadenceFunction.addNewPoint(new Point2d(1.559, 0.1565));
         cadenceFunction.addNewPoint(new Point2d(2.471, 0.0985));
-        cadenceFunction.addNewPoint(new Point2d(3.571, 0.0741));
-        
+        cadenceFunction.addNewPoint(new Point2d(3.571, 0.0741));       
         running = true;
         soundPool = new SoundPool(numSounds, AudioManager.STREAM_MUSIC, 0);
-        soundPool.setOnLoadCompleteListener(this);
-        tone_1000 = soundPool.load(context, R.raw.tone_1000mhz, 1);
-        sink = soundPool.load(context, R.raw.sink_tone500mhz, 1);
-        avgvario=var;
+        soundPool.setOnLoadCompleteListener(this);   
+    }
+    public void stop() {
+        this.beepOn=false;       
+    }
+    public void start(Context context,int soundtype,double newsinkalarm) { 
+    	try {
         sinkalarm=newsinkalarm;
+    	if(soundtype==1)
+        	temp=R.raw.tone_600mhz;
+        else if (soundtype==2)
+        	temp=R.raw.tone_750mhz;
+        else if (soundtype==3)
+        	temp=R.raw.tone_1000mhz;
+        tone = soundPool.load(context, temp, 1);
+        sink = soundPool.load(context, R.raw.sink_tone500mhz, 1);
+        this.beepOn=true;  
+    	  } catch (Exception e) {}
     }
     public void setAvgVario(double newavgvario) {
     	this.avgvario = newavgvario;    	
-    }
-    public void stop() {
-    	this.beepOn = false; 	
-    }  
-    public void start() {
-    	this.beepOn = true; 	
-    }  
+    }     
     public void run() {
         while (running) {
             try {
                 while (beepOn) {                 	
                 	if(avgvario>0.2)
                 	{
-                		 tone_1000_stream = soundPool.play(tone_1000, 1.0f, 1.0f, 0, -1, getRateFromTone1000(avgvario));//need to set rate to something other than 1.0f to start with for Android 4.1 based Nexus 7. Perhaps a bug?
+                		 tone_stream = soundPool.play(tone, 1.0f, 1.0f, 0, -1, getRateFromTone1000(avgvario));//need to set rate to something other than 1.0f to start with for Android 4.1 based Nexus 7. Perhaps a bug?
                          Thread.sleep((int) (cadenceFunction.getValue(avgvario) * 1250));
-                         soundPool.setVolume(tone_1000_stream, 0.0f, 0.0f);
+                         soundPool.setVolume(tone_stream, 0.0f, 0.0f);
                          Thread.sleep((int) (cadenceFunction.getValue(avgvario) * 1000));
                 	}else if(avgvario<=-1*sinkalarm)
                 	{
@@ -67,21 +75,18 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
                 		Thread.sleep((int) (200));
                 	}
                 }
-            } catch (InterruptedException e) {
-                soundPool.stop(tone_1000_stream);
+            } catch (Exception e) {                
             }            
         }
-        soundPool.stop(tone_1000_stream);
+        soundPool.stop(tone_stream);
         soundPool.stop(sink_stream);
         soundPool.release();
         soundPool = null;
     }
 
     public synchronized void setRunning(boolean running) {
-        this.running = running;
-        if (beepOn) {
-            thread.interrupt();
-        }
+        this.running = running;    
+        this.beepOn=false;
     }   
     public float getRateFromTone1000(double var) {
         double hZ = base + increment * var;
@@ -127,9 +132,12 @@ public class BeepThread implements Runnable, SoundPool.OnLoadCompleteListener {
     }
 
     public void onDestroy() {
-        this.setRunning(false);
+    	try{
+        this.setRunning(false);           
+        thread.stop();
         thread = null;
+    	}catch(Exception e){};
     }
-
+    
 
 }

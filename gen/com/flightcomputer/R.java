@@ -9,23 +9,25 @@ package com.flightcomputer;
 
 public final class R {
     public static final class array {
-        public static final int dump_level=0x7f060005;
-        public static final int dump_level_value=0x7f060006;
-        public static final int logtime_level=0x7f060007;
-        public static final int logtime_level_value=0x7f060008;
+        public static final int dump_level=0x7f060007;
+        public static final int dump_level_value=0x7f060008;
+        public static final int logtime_level=0x7f060009;
+        public static final int logtime_level_value=0x7f06000a;
         public static final int preferences_map_database_keys=0x7f060000;
         public static final int preferences_map_theme_keys=0x7f060004;
         public static final int preferences_scale_bar_unit_keys=0x7f060001;
         public static final int preferences_text_scale_keys=0x7f060002;
-        public static final int regions=0x7f060009;
-        public static final int sink_level=0x7f06000a;
-        public static final int sink_level_value=0x7f06000b;
-        public static final int taskpointtype_arrays=0x7f06000c;
-        public static final int vehicletype_level=0x7f06000d;
-        public static final int vehicletype_level_value=0x7f06000e;
+        public static final int regions=0x7f06000b;
+        public static final int sink_level=0x7f06000c;
+        public static final int sink_level_value=0x7f06000d;
+        public static final int soundfreq=0x7f060005;
+        public static final int soundfreqValues=0x7f060006;
+        public static final int taskpointtype_arrays=0x7f06000e;
+        public static final int vehicletype_level=0x7f06000f;
+        public static final int vehicletype_level_value=0x7f060010;
         public static final int view_sections=0x7f060003;
-        public static final int zoom_level=0x7f06000f;
-        public static final int zoom_level_value=0x7f060010;
+        public static final int zoom_level=0x7f060011;
+        public static final int zoom_level_value=0x7f060012;
     }
     public static final class attr {
     }
@@ -209,6 +211,8 @@ public final class R {
     public static final class raw {
         public static final int sink_tone500mhz=0x7f050000;
         public static final int tone_1000mhz=0x7f050001;
+        public static final int tone_600mhz=0x7f050002;
+        public static final int tone_750mhz=0x7f050003;
     }
     public static final class string {
         public static final int action_settings=0x7f070005;

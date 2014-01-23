@@ -69,6 +69,13 @@
           android:defaultValue="false"
           android:summary="Igc Record:-> sdcard/Variolog"
           android:key="checkboxigcrecord" /> 
+     <ListPreference
+            android:key="soundfreq"
+            android:title="Lift Sound Frequency"
+            android:summary="Define Lift Sound Frequency Hz"
+            android:defaultValue="2"
+            android:entries="@array/soundfreq"
+            android:entryValues="@array/soundfreqValues" />   
     <ListPreference android:key="logtime" android:title="@string/preferences_logtime"        
         android:entries="@array/logtime_level" 
         android:entryValues="@array/logtime_level_value"

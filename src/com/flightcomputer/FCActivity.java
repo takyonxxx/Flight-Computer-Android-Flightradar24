@@ -114,7 +114,7 @@ public class FCActivity extends Activity {
 	private RouteLine routeline=new RouteLine();
 	private TrckLine trckline=new TrckLine();
 	private Circle circle=new Circle();
-	private int radarrange=0,radaralt=0;
+	private int radarrange=0,radaralt=0,soundtype=2;;
 	private LocationManager locationManager=null;
 	private LocationListener locationListener=null;	
 	private View textEntryView=null;
@@ -268,10 +268,11 @@ public class FCActivity extends Activity {
 				if(!vario && barometer)
 				{							        	          
 					vario=true;	
-					variohandler.postDelayed(variorunnable, 1000);
+					variohandler.postDelayed(variorunnable, 1000);					
 					if(beeps==null)
-						beeps = new BeepThread(FCActivity.this,avgvario,sinkalarm);
-					beeps.start();
+			        	beeps = new BeepThread(FCActivity.this);
+					if(beeps!=null)
+					   beeps.start(getApplicationContext(),soundtype,sinkalarm);					
 					 if (sensor_pressure_ != null) {
 				    		sensor_manager_.registerListener(mSensorListener, sensor_pressure_, 1000000);
 				    	
@@ -283,8 +284,8 @@ public class FCActivity extends Activity {
 				}else
 				{	
 					vario=false;
-					variohandler.removeCallbacks(variorunnable);	
-					beeps.stop();
+					variohandler.removeCallbacks(variorunnable);					
+					beeps.stop();					
 					 if (sensor_pressure_ != null) {
 				    		sensor_manager_.unregisterListener(mSensorListener);
 				    	}	
@@ -438,7 +439,8 @@ public class FCActivity extends Activity {
 		radarregion= preferences.getString("radarregion", "full");			
 		String radarRangeStr = preferences.getString("radarrange", "200");
 		radarrange = Integer.parseInt(radarRangeStr);
-		
+		String soundfreqstr=preferences.getString("soundfreq", "2"); 	        
+        soundtype=Integer.parseInt(soundfreqstr); 
 		String radarAltStr = preferences.getString("radaralt", "15000");
 		radaralt = Integer.parseInt(radarAltStr);
 		radarready = preferences.getBoolean("checkradar", false);
@@ -487,7 +489,14 @@ public class FCActivity extends Activity {
 		SetProgressColor("#0000FF",avgprogbar);
 		SetProgressColor("#ff0000",avgprogbar_reverse);		
 		avgprogbar_reverse.setProgress(0);
-		avgprogbar.setProgress(0);			
+		avgprogbar.setProgress(0);	
+		if(vario)
+		{			
+			if(beeps==null)
+	        	beeps = new BeepThread(FCActivity.this);
+			if(beeps!=null)
+			   beeps.start(getApplicationContext(),soundtype,sinkalarm);				
+		}
 	}
     protected void onPause(){
         super.onPause();       
