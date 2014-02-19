@@ -18,5 +18,4 @@ http://www.flightradar24.com
 Google Store:
 https://play.google.com/store/apps/details?id=com.flightcomputer
 
-LICENSE
-GNU GENERAL PUBLIC LICENSE Version 3
+LICENSE GNU GENERAL PUBLIC LICENSE Version 3
